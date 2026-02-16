@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, #2b005c, #000000);" stylesheets="@../estilos/Inicio.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quienesquien.Controlador.InicioController">
+   <children>
+      <!-- Fondo con imagen opcional o degradado -->
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="false" opacity="0.15">
+         <image>
+             <!-- Intentamos usar la misma imagen de fondo si existe, o un placeholder -->
+            <Image url="@../Imagenes/fondoInicio.png" />
+         </image>
+      </ImageView>
+
+      <!-- Título Principal -->
+      <Label alignment="CENTER" layoutX="340.0" layoutY="50.0" prefHeight="100.0" prefWidth="600.0" text="¿QUIÉN ES QUIÉN?" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+         <effect>
+            <DropShadow color="#000000" offsetX="5.0" offsetY="5.0" radius="10.0" />
+         </effect>
+      </Label>
+
+      <!-- Contenedor Izquierdo: Tabla de Puntuaciones -->
+      <VBox layoutX="100.0" layoutY="180.0" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 20; -fx-padding: 20;">
+         <children>
+            <Label text="Calificación" textFill="#00ffcc">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#000000" radius="2.0" />
+               </effect>
+            </Label>
+            <TableView fx:id="tblPartidas" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: transparent; -fx-base: #2b005c; -fx-control-inner-background: #1a0033; -fx-table-cell-border-color: transparent;">
+              <columns>
+                <TableColumn fx:id="colNombre" prefWidth="250.0" text="Nombre" style="-fx-alignment: CENTER;" />
+                <TableColumn fx:id="colPuntuacion" prefWidth="130.0" text="Puntuación" style="-fx-alignment: CENTER;" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+
+      <!-- Contenedor Derecho: Entrada de Usuario -->
+      <VBox alignment="CENTER" layoutX="700.0" layoutY="250.0" prefHeight="300.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: rgba(255, 255, 255, 0.1); -fx-background-radius: 20; -fx-padding: 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);">
+         <children>
+            <Label text="¡Bienvenido Jugador!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Introduce tu nombre:" textFill="#dddddd">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" prefHeight="40.0" promptText="Tu nombre aquí..." style="-fx-background-radius: 10; -fx-border-color: #5728E0; -fx-border-radius: 10; -fx-border-width: 2;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+
+            <Button fx:id="btnIniciar" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #4900E0, #7b4df2); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 25; -fx-cursor: hand; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 3);" text="JUGAR AHORA">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
