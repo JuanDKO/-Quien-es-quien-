@@ -1,0 +1,70 @@
+/* Estilos para el popup del ComboBox */
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 8, 0, 0, 3);
+    -fx-padding: 5;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #5728E0;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+}
+
+.combo-box-popup .list-cell:filled:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #2c0b8a;
+    -fx-cursor: hand;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #e0d4fc;
+    -fx-text-fill: #2c0b8a;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #5728E0;
+    /* Texto del combo cerrado */
+}
+
+/* Estilos de la barra de desplazamiento */
+.combo-box-popup .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12;
+    /* Hacemos la barra un poco más ancha */
+}
+
+.combo-box-popup .scroll-bar:vertical .track {
+    -fx-background-color: #e6e6e6;
+    /* Gris claro para el fondo del carril */
+    -fx-background-radius: 5;
+}
+
+.combo-box-popup .scroll-bar:vertical .thumb {
+    -fx-background-color: #5728E0;
+    /* Morado sólido y visible */
+    -fx-background-radius: 5;
+}
+
+.combo-box-popup .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4900E0;
+    /* Un poco más oscuro al pasar el ratón */
+}
+
+/* Ocultar las flechas de desplazamiento */
+.combo-box-popup .scroll-bar:vertical .increment-button,
+.combo-box-popup .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-shape: null;
+}
+
+.combo-box-popup .scroll-bar:vertical .increment-arrow,
+.combo-box-popup .scroll-bar:vertical .decrement-arrow {
+    -fx-padding: 0;
+    -fx-shape: null;
+}
